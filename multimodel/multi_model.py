@@ -42,7 +42,7 @@ class MultiModelPrompter:
             self.model_names.append("text-davinci")
         
         if self.config.llama:
-            if len(self.config.llama) > 4:
+            if len(self.config.llama) != 4:
                 raise AttributeError("There are only 4 llama models! String should be bitmap of 0 | 1")
             
             bool_map = ["llama-7b", "llama-13b", "llama-30b", "llama-65b"]
@@ -51,7 +51,7 @@ class MultiModelPrompter:
                     self.model_names.append(bool_map[i])
                     
         if self.config.alpaca:
-            if len(self.config.alpaca) > 4:
+            if len(self.config.alpaca) != 4:
                 raise AttributeError("There are only 4 llama models! String should be bitmap of 0 | 1")
             
             bool_map = ["alpaca-7b", "alpaca-13b", "alpaca-30b", "alpaca-65b"]
@@ -61,3 +61,8 @@ class MultiModelPrompter:
                     
         if self.config.gpt4all_j:
             raise NotImplementedError
+        
+        if len(self.model_names) == 0:
+            raise AttributeError
+        
+    
