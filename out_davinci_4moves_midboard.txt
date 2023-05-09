@@ -1,0 +1,17 @@
+What is the shortest possible number of moves in which a knight on an empty chessboard can move from d4 to f6?
+ The knight can move two squares in one direction and then one square in a perpendicular direction. This means that the knight can move from d4 to f6 in two moves: d4-e6-f6.
+----------------------------------------------------------------
+What is the shortest possible number of moves in which a knight on an empty chessboard can move from d4 to f6?
+ The knight can move in an “L” shape, so the shortest possible number of moves would be three. 
+
+The knight can move from d4 to c6 in one move, then from c6 to e5 in the second move, and finally from e5 to f6 in the third move.
+----------------------------------------------------------------
+What is the shortest possible number of moves in which a knight on an empty chessboard can move from d4 to f6?
+ The knight can move in an L-shape, two squares horizontally and one square vertically, or two squares vertically and one square horizontally.
+
+1. Move from d4 to e6
+2. Move from e6 to g5
+3. Move from g5 to f6
+
+Therefore, the shortest possible number of moves in which a knight can move from d4 to f6 is 3.
+----------------------------------------------------------------

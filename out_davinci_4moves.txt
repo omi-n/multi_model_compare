@@ -1,0 +1,9 @@
+What is the shortest possible number of moves in which a knight on an empty chessboard can move from a1 to c3?
+ The knight can move in an "L" shape, two squares in one direction and one square in the perpendicular direction. Therefore, the shortest possible number of moves for a knight to move from a1 to c3 is 2 moves. The knight can move from a1 to b3 in one move, and then from b3 to c3 in the second move.
+----------------------------------------------------------------
+What is the shortest possible number of moves in which a knight on an empty chessboard can move from a1 to c3?
+ The knight can move in an L shape, so the shortest possible route would be: a1->b3->c3. This requires two moves.
+----------------------------------------------------------------
+What is the shortest possible number of moves in which a knight on an empty chessboard can move from a1 to c3?
+ The knight has to move from a1 to b3, and then from b3 to c3. This can be done in two moves, so the shortest possible number of moves in which a knight on an empty chessboard can move from a1 to c3 is two.
+----------------------------------------------------------------
