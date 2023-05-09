@@ -4,6 +4,7 @@ from typing import Optional
 from langchain.callbacks.manager import CallbackManager
 import os
 from langchain.llms import AzureOpenAI
+from langchain.chat_models import AzureChatOpenAI
 from langchain.llms import LlamaCpp
 
 openai_set = {"gpt4-32k", "gpt4-8k", "gpt35-turbo", "text-davinci"}
@@ -19,11 +20,14 @@ def get_model(model_name, max_tokens=256, callbacks=None, verbose=False, dotenv_
     
     proc_name = model_name.lower()
     if proc_name in openai_set:
+        chat = False
         match proc_name:
             case "gpt4-32k":
                 config = GPT432KConfig(callbacks=callbacks)
+                chat = True
             case "gpt4-8k":
                 config = GPT48KConfig(callbacks=callbacks)
+                chat = True
             case "gpt35-turbo":
                 config = GPT35TurboConfig(callbacks=callbacks)
             case "text-davinci":
@@ -31,7 +35,16 @@ def get_model(model_name, max_tokens=256, callbacks=None, verbose=False, dotenv_
             case _:
                 raise NotImplementedError("Model not yet supported!")
             
-        return AzureOpenAI(
+        if chat:
+            return AzureChatOpenAI(
+                deployment_name=config.deployment_name,
+                model_name=config.model_name,
+                callbacks=config.callback_manager,
+                max_tokens=max_tokens,
+                verbose=verbose
+            )
+        else:
+            return AzureOpenAI(
                 deployment_name=config.deployment_name,
                 model_name=config.model_name,
                 callbacks=config.callback_manager,
