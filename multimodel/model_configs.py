@@ -30,6 +30,7 @@ def get_model(model_name, max_tokens=256, callbacks=None, verbose=False, dotenv_
                 chat = True
             case "gpt35-turbo":
                 config = GPT35TurboConfig(callbacks=callbacks)
+                chat = True
             case "text-davinci":
                 config = TextDavinciConfig(callbacks=callbacks)
             case _:

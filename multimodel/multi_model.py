@@ -5,6 +5,7 @@ from typing import Optional
 from langchain.callbacks.manager import CallbackManager
 import os
 
+
 @dataclass_json
 @dataclass
 class MultiModelPrompterConfig:
@@ -20,6 +21,7 @@ class MultiModelPrompterConfig:
     
     # will add this at a later date
     gpt4all_j: bool = False
+
 
 class MultiModelPrompter:
     def __init__(self, config: MultiModelPrompterConfig):        

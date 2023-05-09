@@ -1,0 +1,41 @@
+What is the shortest possible number of moves in which a knight on an empty chessboard can move from a1 to c3?
+The knight can move in 8 possible directions, but only 2 of them can get it closer to c3: 
+
+1. From a1, the knight can move to b3 (2 moves) 
+2. From b3, the knight can move to c3 (1 move) 
+
+Therefore, the shortest possible number of moves for the knight to reach c3 from a1 is 3.
+----------------------------------------------------------------
+What is the shortest possible number of moves in which a knight on an empty chessboard can move from a1 to c3?
+First, the knight can move two squares up to b3 or two squares to the right to reach c2. 
+
+From there, it can move one square up to c3. 
+
+Therefore, the shortest possible number of moves is 2.
+----------------------------------------------------------------
+What is the shortest possible number of moves in which a knight on an empty chessboard can move from a1 to c3?
+1. The knight starts on a1.
+2. The knight can move to b3 in one move.
+3. The knight can then move to c3 in another move.
+
+Therefore, the shortest possible number of moves in which a knight on an empty chessboard can move from a1 to c3 is 2.
+----------------------------------------------------------------
+What is the shortest possible number of moves in which a knight on an empty chessboard can move from b2 to d4?
+1. The knight can move to a5, c5, or d4 in one move.
+2. If the knight moves to a5, it can then move to c6 and then to d4 in two more moves.
+3. If the knight moves to c5, it can then move to b3 and then to d4 in two more moves.
+4. If the knight moves to d4 directly, it will take only one move.
+
+Therefore, the shortest possible number of moves for the knight to move from b2 to d4 is 1 move.
+----------------------------------------------------------------
+What is the shortest possible number of moves in which a knight on an empty chessboard can move from b2 to d4?
+First, the knight can move from b2 to c4 (2 moves). From there, it can move to d2 (1 move) and then to d4 (2 moves). Therefore, the shortest possible number of moves is 5.
+----------------------------------------------------------------
+What is the shortest possible number of moves in which a knight on an empty chessboard can move from b2 to d4?
+The knight can move two squares horizontally or vertically and then one square perpendicular to that direction. So, to move from b2 to d4, the knight can make the following moves:
+1. b2 to c4
+2. c4 to d2
+3. d2 to d4
+
+Therefore, the knight can move from b2 to d4 in just three moves.
+----------------------------------------------------------------

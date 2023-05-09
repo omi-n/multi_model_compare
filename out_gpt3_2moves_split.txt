@@ -1,0 +1,86 @@
+What is the shortest possible number of moves in which a knight on an empty chessboard can move from a1 to e3? What about from e3 to c3
+From a1, the knight can move to b3 or c2.
+From b3, the knight can move to c1, c5, d4, or a5.
+From c2, the knight can move to b4, d4, or e1.
+From c5, the knight can move to b3, d3, b7, or d7.
+From d4, the knight can move to c2, e2, b3, or f3.
+From a5, the knight can move to b3, c4, or c6.
+From b4, the knight can move to a2, c2, d5, or d3.
+From e1, the knight can move to c2, d3, f3, or g2.
+From d3, the knight can move to b2, b4, c1, c5, e5, e1, f4, or f2.
+From b7, the knight can move to a5, c5, d8, or d6.
+From d7, the knight can move to b6, b8, c5, or e5.
+From c4, the knight can move to b2, b6, d6, or e5.
+From c6, the knight can move to b4, b8, d8, or e7.
+From a2, the knight can move to b4 or c3.
+From d5, the knight can move to b4, c3, e3, or f4.
+From f3, the knight can move to d4, e5, g5, or h4.
+From g2, the knight can move to e1, e3, f4, or h4.
+From e5, the knight can move to c4, c6, d3, or f3.
+From f4, the knight can move to d3, e2, g2, or h3.
+From f2, the knight can move to d3, e4, g4, or h1.
+From b6, the knight can move to a4, c4, d5, or d7.
+From b8, the knight can move to a6, c6, d7, or d5.
+From d8, the knight can move to b7, c6, e6, or f7.
+From e7, the knight can move to c6, c8
+----------------------------------------------------------------
+What is the shortest possible number of moves in which a knight on an empty chessboard can move from a1 to e3? What about from e3 to c3
+To move from a1 to e3, the knight can take the following path: 
+
+1. a1 - c2 
+2. c2 - d4 
+3. d4 - e3 
+
+Therefore, the shortest possible number of moves is 3. 
+
+To move from e3 to c3, the knight can take the following path: 
+
+1. e3 - d1 
+2. d1 - b2 
+3. b2 - c3 
+
+Therefore, the shortest possible number of moves is again 3.
+----------------------------------------------------------------
+What is the shortest possible number of moves in which a knight on an empty chessboard can move from a1 to e3? What about from e3 to c3
+To move from a1 to e3, the knight can take the following path:
+
+1. Move to b3
+2. Move to d4
+3. Move to e3
+
+So the shortest possible number of moves is 3.
+
+To move from e3 to c3, the knight can take the following path:
+
+1. Move to d5
+2. Move to b4
+3. Move to c3
+
+So the shortest possible number of moves is also 3.
+----------------------------------------------------------------
+What is the shortest possible number of moves in which a knight on an empty chessboard can move from a1 to d4? What about from d4 to c3
+To move a knight from a1 to d4, the shortest possible number of moves is 2. The knight can move from a1 to c2 (1st move), and then from c2 to d4 (2nd move).
+
+To move a knight from d4 to c3, the shortest possible number of moves is also 2. The knight can move from d4 to b5 (1st move), and then from b5 to c3 (2nd move).
+----------------------------------------------------------------
+What is the shortest possible number of moves in which a knight on an empty chessboard can move from a1 to d4? What about from d4 to c3
+To move from a1 to d4, the knight can take the following path: 
+
+1. a1 to b3 
+2. b3 to c5 
+3. c5 to d4 
+
+Therefore, the shortest possible number of moves is 3. 
+
+To move from d4 to c3, the knight can take the following path: 
+
+1. d4 to b5 
+2. b5 to c3 
+
+Therefore, the shortest possible number of moves is 2.
+----------------------------------------------------------------
+What is the shortest possible number of moves in which a knight on an empty chessboard can move from a1 to d4? What about from d4 to c3
+From a1 to d4, the knight can move in the following sequence: a1 to b3 to c5 to d4. This takes a total of three moves.
+
+From d4 to c3, the knight can move in the following sequence: d4 to b5 to c3. This also takes a total of three moves.
+----------------------------------------------------------------
