@@ -10,9 +10,12 @@ openai_set = {"gpt4-32k", "gpt4-8k", "gpt35-turbo", "text-davinci"}
 llama_set = {"llama-7b", "llama-13b", "llama-30b", "llama-65b"}
 alpaca_set = {"alpaca-7b", "alpaca-30b","alpaca-64b"}
 
-def get_model(model_name, max_tokens=256, callbacks=None, verbose=False):
+def get_model(model_name, max_tokens=256, callbacks=None, verbose=False, dotenv_path=None):
     from dotenv import load_dotenv
-    load_dotenv(config.dotenv_path)
+    if dotenv_path is not None:
+        load_dotenv(dotenv_path)
+    else:
+        load_dotenv()
     
     proc_name = model_name.lower()
     if proc_name in openai_set:
@@ -48,7 +51,7 @@ def get_model(model_name, max_tokens=256, callbacks=None, verbose=False):
                 config = LLaMA65BConfig(callbacks=callbacks)
             case "alpaca-7b":
                 config = Alpaca7BConfig(callbacks=callbacks)
-            case "alpaca-13b":
+            case "alpaca-13b": # TODO: add support when weights available
                 config = Alpaca13BConfig(callbacks=callbacks)
             case "alpaca-30b":
                 config = Alpaca30BConfig(callbacks=callbacks)
@@ -64,15 +67,25 @@ def get_model(model_name, max_tokens=256, callbacks=None, verbose=False):
             verbose=verbose
         )
         
+    else:
+        raise NotImplementedError
+        
 
 @dataclass
 @dataclass_json
 class ModelConfig:
-    deployment_name: Optional[str] = None
-    model_name: Optional[str] = None
-    local_path: Optional[str] = None
-    backend: Optional[str] = None
-    callback_manager: Optional[CallbackManager] = None
+    def __init__(self,
+                 deployment_name: Optional[str] = None,
+                 model_name: Optional[str] = None,
+                 local_path: Optional[str] = None,
+                 backend: Optional[str] = None,
+                 callback_manager: Optional[CallbackManager] = None
+                ):
+        self.deployment_name = deployment_name
+        self.model_name = model_name
+        self.local_path = local_path
+        self.backend = backend
+        self.callback_manager = callback_manager
     
     
 class GPT432KConfig(ModelConfig):
