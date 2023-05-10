@@ -1,10 +1,13 @@
 from dataclasses import dataclass
 from dataclasses_json import dataclass_json
 import numpy as np
-from typing import Optional
+from typing import Optional, List
 from langchain.callbacks.manager import CallbackManager
 import os
-
+from langchain import PromptTemplate, LLMChain
+from .model_configs import get_model
+from tqdm import trange, tqdm
+import time
 
 @dataclass_json
 @dataclass
@@ -67,4 +70,42 @@ class MultiModelPrompter:
         if len(self.model_names) == 0:
             raise AttributeError
         
-    
+    def run_prompt(self,
+                   output_path: str,
+                   prompts: List[tuple[int, str]],
+                   prompt_templates: List[PromptTemplate],
+                   callback_manager: CallbackManager,
+                   max_tokens: int=256,
+                   verbose: bool = False,
+                   dotenv_path: str = "apidata.env",
+                   num_repeats: int = 1):
+        """
+        NOTE: Format for prompts should be (PromptTemplateIndex, PromptString)
+        """
+        for name in tqdm(self.model_names):
+            model = get_model(name, max_tokens, callback_manager, verbose, dotenv_path)
+            
+            prompt_len = len(prompts)
+            for idx, prompt in tqdm(prompts, leave=False):
+                assert idx < len(prompt_templates)
+                template = prompt_templates[idx]
+                
+                llm_chain = LLMChain(prompt=template, llm=model)
+                
+                for _ in trange(0, num_repeats, leave=False):
+                    with open(output_path, "a") as f:
+                        chain_resp = f"Template: {idx}\nQuestion: {prompt}\n\n"
+                        
+                        for _ in range(5): # try 5 times for the rate limit
+                            try:
+                                chain_resp += llm_chain.run(prompt)
+                                chain_resp += "\n----------------------------------------------------------------\n"
+                                f.write(chain_resp)
+                                break
+                            except Exception as e:
+                                chain_resp += str(e)
+                                time.sleep(15)
+                        else:
+                            raise TimeoutError("Rate limited more than 5 times! Exiting.")
+                    
+            

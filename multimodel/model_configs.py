@@ -77,7 +77,7 @@ def get_model(model_name, max_tokens=256, callbacks=None, verbose=False, dotenv_
         return LlamaCpp(
             model_path=config.local_path,
             callback_manager=config.callback_manager,
-            max_tokens=max_tokens,
+            max_tokens=min(256, max_tokens),
             verbose=verbose
         )
         
