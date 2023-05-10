@@ -94,7 +94,7 @@ class MultiModelPrompter:
                 
                 for _ in trange(0, num_repeats, leave=False):
                     with open(output_path, "a") as f:
-                        chain_resp = f"Template: {idx}\nQuestion: {prompt}\n\n"
+                        chain_resp = f"Model: {name}\nTemplate: {idx}\nQuestion: {prompt}\n\n"
                         
                         for _ in range(5): # try 5 times for the rate limit
                             try:
