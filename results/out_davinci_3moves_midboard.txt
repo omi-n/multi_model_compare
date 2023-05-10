@@ -1,0 +1,28 @@
+What is the shortest possible number of moves in which a knight on an empty chessboard can move from d4 to g4?
+ The knight can move from d4 to f5 in one move. Then, it can move from f5 to g3 in another move. Finally, it can move from g3 to g4 in a third move. Therefore, the shortest possible number of moves for the knight to move from d4 to g4 is three.
+----------------------------------------------------------------
+What is the shortest possible number of moves in which a knight on an empty chessboard can move from d4 to g4?
+ The knight moves in an "L"-shape pattern, so it can move two squares horizontally and one square vertically, or two squares vertically and one square horizontally.
+
+So the shortest possible number of moves for the knight to move from d4 to g4 is 2:
+1. d4-f5
+2. f5-g4
+----------------------------------------------------------------
+What is the shortest possible number of moves in which a knight on an empty chessboard can move from d4 to g4?
+ The knight moves in an L-shape, so it can move two squares horizontally or vertically and one square diagonally. To reach g4, the knight must move two squares to the right, and then two squares up. The shortest possible number of moves is therefore two: 1. d4-f5-g4.
+----------------------------------------------------------------
+What is the shortest possible number of moves in which a knight on an empty chessboard can move from d4 to h7?
+ The knight moves in an "L" shape. The shortest possible number of moves the knight can take to move from d4 to h7 is 4 moves. The knight can move from d4 to f5, then to g7, then to e6, and finally to h7.
+----------------------------------------------------------------
+What is the shortest possible number of moves in which a knight on an empty chessboard can move from d4 to h7?
+ The knight can move from d4 to e6 in one move. From e6, the knight can move to g7 in one move. Finally, from g7, the knight can move to h7 in one move. Therefore, the shortest possible number of moves in which a knight on an empty chessboard can move from d4 to h7 is three moves.
+----------------------------------------------------------------
+What is the shortest possible number of moves in which a knight on an empty chessboard can move from d4 to h7?
+
+
+1. The knight can move from d4 to f3.
+2. Then move to g5.
+3. Finally, move to h7.
+
+Therefore, the shortest possible number of moves in which a knight on an empty chessboard can move from d4 to h7 is 3.
+----------------------------------------------------------------

@@ -26,21 +26,14 @@ Answer: Let's think step by step."""
 callback_manager = CallbackManager([StreamingStdOutCallbackHandler()])
 
 prompt = PromptTemplate(template=template, input_variables=["question"])
-llm = get_model("text-davinci", dotenv_path="testing/.env", max_tokens=256)
+llm = get_model("gpt4-8k", dotenv_path="testing/.env", max_tokens=256)
 
 llm_chain = LLMChain(prompt=prompt, llm=llm)
 
-# d4 f6
-
-# d4 g4
-# d4 h7
-
-# d4 h2 h2 f6
-# d4 g5 g5 f6
-question = "What is the shortest possible number of moves in which a knight on an empty chessboard can move from d4 to f6?"
+question = "What is the shortest possible number of moves in which a knight on an empty chessboard can move from d4 to g5? What about g5 to f6?"
 
 for _ in trange(0, 3):
-    with open("out_davinci_4moves_midboard.txt", "a") as f:
+    with open("results/gpt4-validation.txt", "a") as f:
         chain_resp = question + "\n"
         chain_resp += llm_chain.run(question)
         chain_resp += "\n----------------------------------------------------------------\n"

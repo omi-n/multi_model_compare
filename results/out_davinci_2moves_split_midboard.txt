@@ -1,0 +1,52 @@
+What is the shortest possible number of moves in which a knight on an empty chessboard can move from d4 to h2? What about h2 to f6?
+ 
+
+From d4 to h2:
+1. Move the knight to e6
+2. Move the knight to g3
+3. Move the knight to h2
+
+Total moves: 3
+
+From h2 to f6:
+1. Move the knight to g4
+2. Move the knight to e5
+3. Move the knight to f6
+
+Total moves: 3
+----------------------------------------------------------------
+What is the shortest possible number of moves in which a knight on an empty chessboard can move from d4 to h2? What about h2 to f6?
+ 
+
+The shortest possible number of moves for a knight to move from d4 to h2 is 3 moves. 
+
+The knight needs to move to f3, then e5, and then finally g4, which will then bring it to h2. 
+
+The shortest possible number of moves for a knight to move from h2 to f6 is also 3 moves. 
+
+The knight needs to move to g4, then e5, and then finally f7, which will then bring it to f6.
+----------------------------------------------------------------
+What is the shortest possible number of moves in which a knight on an empty chessboard can move from d4 to h2? What about h2 to f6?
+
+
+From d4 to h2: The shortest possible number of moves for a knight on an empty chessboard to move from d4 to h2 is 3. The knight needs to move to f5, then g3, and then h2.
+
+From h2 to f6: The shortest possible number of moves for a knight on an empty chessboard to move from h2 to f6 is 2. The knight needs to move to g4, and then f6.
+----------------------------------------------------------------
+What is the shortest possible number of moves in which a knight on an empty chessboard can move from d4 to g5? What about g5 to f6?
+ The knight can reach g5 from d4 in three moves: d4-f3-h4-g5. To get from g5 to f6, it takes two moves: g5-e6-f6. Therefore, the shortest possible number of moves required to move a knight from d4 to g5, and then from g5 to f6 is five moves.
+----------------------------------------------------------------
+What is the shortest possible number of moves in which a knight on an empty chessboard can move from d4 to g5? What about g5 to f6?
+
+
+D4 to G5: The knight can move from d4 to f3 in one move, then from f3 to g5 in two moves (f3-d4-g5). So the shortest possible number of moves is three.
+
+G5 to F6: The knight can move from g5 to h3 in one move, then from h3 to f4 in two moves (h3-g5-f4), then from f4 to f6 in one move. So the shortest possible number of moves is four.
+----------------------------------------------------------------
+What is the shortest possible number of moves in which a knight on an empty chessboard can move from d4 to g5? What about g5 to f6?
+
+
+D4 to G5: The shortest possible number of moves is 2. The knight can move to either f6 or e3 and then to g5.
+
+G5 to F6: The shortest possible number of moves is also 2. The knight can move to either h3 or g4 and then to f6.
+----------------------------------------------------------------
